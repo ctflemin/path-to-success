@@ -1,0 +1,502 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Kavoon&display=swap');
+
+/* -------------------- CSS RESET ------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------- ROOT VARIABLES -------------------------------------- */
+:root {
+    --teal: #4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57;
+    --pink: #D9526F;
+    --dark-gray: #1E1E1E;
+    --white: #ffffff;
+    --font-heading: 'Kavoon', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* -------------------- GLOBAL STYLES (mobile first) ---------------------- */
+body {
+    font-family: var(--font-body);
+    color: var(--dark-gray);
+    background-color: var(--purple);
+    text-align: center;
+    padding-top: 0px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    color: var(--white);
+    padding: 30px 20px 20px 20px;
+    top: 0px;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2em;
+    margin: 20px 20px 5px 20px;
+    color: var(--white);
+    text-align: left;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 5px 20px;
+    color: var(--yellow);
+    text-align: left;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.15em;
+    margin: 5px 0;
+    color: var(--purple);
+}
+
+header {
+    background-color: var(--lavender);
+    top: 0px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+footer {
+    display: flex;
+    background-color: var(--lavender);
+    border-radius: 0px 0px 30px 30px;
+    color: var(--white);
+    padding: 40px;
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+}
+
+footer a {
+    color: var(--white);
+}
+
+.motto {
+    background-color: var(--pink);
+    color: var(--white);
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 30px 30px;
+    padding-top: 10px;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.motto2 {
+    background-color: var(--pink);
+    color: var(--white);
+    font-style: italic;
+    display: none;
+    justify-content: center;
+    border-radius: 0px 0px 30px 30px;
+    padding-top: 10px;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+}
+.nav-links a:hover {
+    color: var(--white);
+}
+
+.menu-button {
+    background: var(--yellow);
+    color: var(--dark-gray);
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+/* Service Section */
+.service-category {
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Why Choose Us */
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--pink);
+    padding: 20px;
+    color: var(--white);
+}
+
+.why-container h2 {
+    grid-column: span 2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    gap: 0px;
+}
+
+.why-item {
+    padding: 20px 60px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: var(--dark-gray);
+    justify-content: center;
+    align-items: center;
+}
+.item1 {
+    background: var(--teal);
+}
+
+.item2 {
+    background: var(--lavender);
+}
+
+.item3 {
+    background: var(--yellow);
+}
+
+.item4 {
+    background: var(--white);
+}
+
+/* Pricing Table */
+.pricing-table {
+    background: var(--purple);
+    color: var(--dark-gray);
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px;
+    margin: 0px 20px 20px 20px;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 10px;
+    border: 2px solid var(--yellow);
+    background: var(--white);
+}
+
+.pricing-table th {
+    text-transform: uppercase;
+    font-weight: bold;
+    background: var(--yellow);
+}
+
+/* Call to Action */
+#cta {
+    display: flex;
+    flex-direction: column;
+    background: var(--pink);
+    color: var(--white);
+    padding: 20px;
+    text-align: left;
+}
+#cta h2 {
+    margin: 0px 0px 5px 0px;
+}
+
+#cta p {
+    margin-bottom: 10px;
+}
+
+.schedule-button {
+    background: var(--white);
+    color: var(--dark-gray);
+    padding: 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    font-weight: bold;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* -------------------- MEDIA QUERY (medium) ------------------------------ */
+@media (min-width: 620px) {
+    .motto {
+        display: none;
+    }
+    .motto2 {
+        display: flex;
+    }
+    .service-category {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: stretch;
+        gap: 20px;
+    }
+    .service-card {
+        display: grid;
+        height: 350px;
+    }
+    .item7 {
+        grid-column: span 2;
+        height: auto;
+    }
+    .service-category .item10 {
+        grid-column: span 2;
+        height: auto;
+    }
+    .item11 {
+        grid-column: span 2;
+        height: auto;
+    }
+    .why-container {
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+        gap: 10px;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+    .why-item {
+        max-width: 125px;
+        height: auto;
+        padding: 10px;
+        margin: auto;
+    }
+    .why-container h2 {
+        grid-column: span 4;
+    }
+    #pricing {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #pricing h2 {
+        grid-column: span 2;
+    }
+    .head1{
+        order: 1;
+    }
+    .head2{
+        order: 2;
+    }
+    .table1 {
+        order: 3;
+    }
+    .table2 {
+        order: 4;
+    }
+    .head3{
+        order: 5;
+    }
+    .head4{
+        order: 6;
+    }
+    .table3 {
+        order: 7;
+    }
+    .table4 {
+        order: 8;
+    }
+    #cta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #cta h2 {
+        grid-column: span 2;
+    }
+    .schedule-button {
+        width: 300px;
+        margin-top: 0;
+    }
+}
+
+/* -------------------- MEDIA QUERY (large) ------------------------------ */
+@media (min-width: 950px) {
+    .service-category {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .service-card {
+        height: auto;
+        width: auto;
+    }
+    .menu-button {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: absolute;
+        padding: 5px 10px 5px 10px;
+        background: var(--yellow);
+        border-radius: 0px 0px 30px 30px;
+        gap: 20px;
+        right: 0px;
+        top: 0px;
+        margin-bottom: 20px;
+    }
+    h1 {
+        padding-top: 50px;
+    }
+    #services {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: auto;
+        height: auto;
+        align-items: start;
+    }
+    .cathead1 {
+        order: 1
+    }
+    .cathead2 {
+        order: 2
+    }
+    .cathead3 {
+        order: 3
+    }
+    .cathead4 {
+        order: 4
+    }
+    .cat1 {
+        order: 5
+    }
+    .cat2 {
+        order: 6
+    }
+    .cat3 {
+        order: 7
+    }
+    .cat4 {
+        order: 8
+    }
+    .why-item {
+        min-width: 220px;
+        height: 75px;
+        padding: 20px;
+
+    }
+    #pricing {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+    }
+    #pricing h2 {
+        grid-column: span 4;
+    }
+    .pricing-table{
+        padding: 5px;
+    }
+    .head1{
+        order: 1;
+    }
+    .head2{
+        order: 2;
+    }
+    .table1 {
+        order: 5;
+    }
+    .table2 {
+        order: 6;
+    }
+    .head3{
+        order: 3;
+    }
+    .head4{
+        order: 4;
+    }
+    .table3 {
+        order: 7;
+    }
+    .table4 {
+        order: 8;
+    }
+}
+
+/* -------------------- MEDIA QUERY (xl) ------------------------------ */
+@media (min-width: 1280px) {
+    header {
+        width: 90%;
+        margin: auto;
+    }
+    main {
+        width: 90%;
+        margin: auto;
+    }
+    footer {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .motto2 {
+        width: 80%;
+    }
+    .why-container {
+        justify-content: center;
+        margin: auto;
+        gap: 5px;
+    }
+    .why-item {
+        min-width: 250px;
+        height: 100px;
+        padding: 20px;
+        margin: auto;
+    }
+}
